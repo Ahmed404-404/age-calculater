@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+
+  <main>
+    <form action="">
+      <div class="inputs">
+        <div class="days">
+          <label for="day">day</label>
+         <input name="day" id="day">
+        </div>
+        <div class="months">
+          <label for="month">month</label>
+          <input name="month" id="month">
+        </div>
+        <div class="years">
+          <label for="year">year</label>
+          <input name="year" id="year">
+        </div>
+      </div>
+      <button type="button"><img src="assets/images/icon-arrow.svg" alt="calculate"></button>
+    </form>
+    <div class="outputs">
+      <h2><span id="years-out">--</span> years</h2>
+      <h2><span id="months-out">--</span> months</h2>
+      <h2><span id="days-out">--</span> days</h2>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
+<!-- 
+
+
+  Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days
+  
+
+ -->

@@ -1,0 +1,129 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    min-height: 100vh;
+    padding: 10vh 15px 0;
+    overflow: hidden;
+}
+main{
+    background-color: #fff;
+    border-radius: 20px 20px 100px 20px;
+    padding: 30px 15px;
+    margin-inline: auto;
+}
+@media (min-width: 767px) {
+    main{
+        width: 80vw;
+        max-width: 600px;
+    }
+}
+form{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+@media (min-width:450px) {
+    form{
+        flex-direction: column;
+    }
+}
+.inputs{
+    display: flex;
+    gap: 10px;
+}
+.days,.months,.years{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.days::after,.months::after,.years::after{
+    content: attr(data-error);
+    color: hsl(0, 100%, 67%);
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+label{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+}
+input{
+    min-width: 80px;
+    width: 100%;
+    padding: 15px 25px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+}
+@media (max-width:450px) {
+    .inputs{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+input:focus{
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+button{
+    all: unset;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    align-self: end;
+    width: 50px;
+}
+@media (max-width:450px) {
+    button{
+        align-self: center;
+    }
+}
+button::before{
+    content: "";
+    position: absolute;
+    width: calc(100vw - 60px);
+    height: 2px;
+    background-color: hsl(0, 0%, 94%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+button::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+button img{
+    width: 25px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+}
+span{
+    color: hsl(259, 100%, 65%);
+}
