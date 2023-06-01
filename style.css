@@ -119,7 +119,7 @@ button::after{
 button img{
     width: 25px;
 }
-h2{
+h1,h2{
     font-size: 32px;
     font-weight: 800;
     font-style: italic;
